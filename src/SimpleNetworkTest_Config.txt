@@ -1,0 +1,11 @@
+#Simple Network Test Config File
+#-----------------------------------
+#Specify one destination per line
+#Fields separated by ";" multiple ports separated by ","
+#Specify in the order "description; device FQDN; destination IP; TCP ports"
+#Comment lines specified with leading "#"
+
+#Example
+#	Webserver; Server1.example.com; 10.0.0.1; 80,443
+
+
