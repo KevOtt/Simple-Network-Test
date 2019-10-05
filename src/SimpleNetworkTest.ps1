@@ -103,7 +103,6 @@ $Servers | ForEach-Object{
     $failed = $success = @()
     $_.ServerPorts.split(',') | ForEach-Object{
         $port = $_.trim()
-        write-host -ForegroundColor green $port
         # Construct .NET class object
         $tcpconnection = New-Object System.Net.Sockets.TcpClient
         # Attempt to create tcp connection and ignore failures
