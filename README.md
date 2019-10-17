@@ -21,7 +21,8 @@ Edit the included config file to include the IPs, ports, and names being tested.
 
 The script will use by default any file named "SimpleNetworkTest_Config.txt" left in the same directory, otherwise alternate can be specified at run with the "-ConfigFile" option.
 
-###Example
+### Example
+
 >Webserver; Server1.example.com; 10.0.0.1; 80,443
 >Fileserver; FileServer.example.com; 10.0.0.120; 445
 
@@ -34,7 +35,7 @@ Example utility output:
 
 Example config file:
 <p align="center">
-  <img src="/Docs/Screenshots/SampleConfigFile.png" width="900" title="Screenshot">
+  <img src="/Docs/Screenshots/SampleConfigFile.png" width="700" title="Screenshot">
 </p>
 
 ## License
