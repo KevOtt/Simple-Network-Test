@@ -24,6 +24,7 @@ The script will use by default any file named "SimpleNetworkTest_Config.txt" lef
 ### Example
 
 >Webserver; Server1.example.com; 10.0.0.1; 80,443
+>
 >Fileserver; FileServer.example.com; 10.0.0.120; 445
 
 ## Screenshots
