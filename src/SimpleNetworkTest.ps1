@@ -50,16 +50,16 @@ CATCH{
 if($ConfigFile -eq ''){
     if($psISE -eq $null){
         $ConfigFile = ((Split-Path -Parent $MyInvocation.MyCommand.Path) + "\SimpleNetworkTest_Config.txt")
-    }
+        }
     else{
         $ConfigFile = ((Split-Path -Parent $psISE.CurrentFile.FullPath) + "\SimpleNetworkTest_Config.txt")
+        }
     }
-}
 
 # Test for config file path
 if((Test-Path $ConfigFile) -ne $true){
     throw 'Config file not found, supply in script directory or specify valid altnernate path'
-}
+    }
 
 # Get content from config file
 $Servers = @()
@@ -69,8 +69,8 @@ Get-Content $ConfigFile | ForEach-Object{
         $entry = $c.split(";")
         $Servers+= (New-Object -TypeName PSObject -Property ([ordered]@{'ServerName'=$entry[1];'ServerIP'=$entry[2];`
         'Server Description'=$entry[0];'ServerPorts'=$entry[3];'DNSResolution'="";'FailedConnection'="";'SuccessfulConnection'=""}))
+        }
     }
-}
 
 #endregion
 
@@ -116,7 +116,7 @@ $Servers | ForEach-Object{
 
         if($tcpconnection.Connected -ne $true){
             $failed += $port
-        }
+            }
         else{
             $success += $port
             }
